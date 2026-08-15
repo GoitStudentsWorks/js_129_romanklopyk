@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.container{
+    /*background-color: #805454;*/
+}
+
+
+.dessert-title {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.dessert-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.category-list {
+ display: none;
+}
+
+.category-select{
+    width: 100%;
+    max-width: 375px;
+    padding: 8px 12px;
+    border: 2px solid #202424;
+    border-radius:6px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"><path d="M1 1l5 5 5-5" stroke="%23333" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 12px 8px;
+    margin-bottom: 40px;
+}
+
+.desserts-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+}
+
+.dessert-item {
+    display: flex;
+    flex-direction: column;
+    /*height: 100%;*/
+    padding: 16px;
+    border: 1px solid #080C0C;
+    border-radius: 16px;
+    margin-bottom: 32px;
+}
+
+.dessert-img{
+    width: 100%;
+    height: 228px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 16px;
+}
+
+.dessert-category {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #080C0C;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.dessert-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.dessert-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #080C0C;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.dessert-details {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dessert-price {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.dessert-details-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    outline: none;
+    border: 2px solid #080C0C;
+
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.load-more-btn {
+    background-color: #F19898;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    border-radius: 100px;
+    padding: 12px 24px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #080C0C;
+}
+
+
+
+.load-more-btn {
+
+}
+
+.active {
+    color: red;
+}
+.hidden {
+    display: none;
+}
+
+@keyframes spinner-line-fade-more {
+    0%, 100% {
+        opacity: 0; /* minimum opacity */
+    }
+    1% {
+        opacity: 1;
+    }
+}
+
+@keyframes spinner-line-fade-quick {
+    0%, 39%, 100% {
+        opacity: 0.25; /* minimum opacity */
+    }
+    40% {
+        opacity: 1;
+    }
+}
+
+@keyframes spinner-line-fade-default {
+    0%, 100% {
+        opacity: 0.22; /* minimum opacity */
+    }
+    1% {
+        opacity: 1;
+    }
+}
+
+@keyframes spinner-line-shrink {
+    0%, 25%, 100% {
+        /* minimum scale and opacity */
+        transform: scale(0.5);
+        opacity: 0.25;
+    }
+    26% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
