@@ -5,7 +5,7 @@ import getData from './api.js';
 const $category = document.querySelector('.category-list');
 const $select = document.querySelector('.category-select');
 const $desserts = document.querySelector('.desserts-list');
-const $loader = document.querySelector('.loader');
+// const $loader = document.querySelector('.loader');
 const $loadMoreBtn = document.querySelector('.load-more-btn');
 
 async function renderCategories() {

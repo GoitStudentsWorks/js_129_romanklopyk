@@ -21,7 +21,7 @@ function showPushNotification(message) {
 }
 
 async function fetchFeedbacks() {
-    loader.classList.remove('hidden');
+    // loader.classList.remove('hidden');
     try {
         const response = await fetch('https://deserts-store.b.goit.study/api/feedbacks');
         if (!response.ok) throw new Error('Помилка сервера при отриманні відгуків');
