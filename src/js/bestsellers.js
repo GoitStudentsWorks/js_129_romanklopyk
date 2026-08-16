@@ -112,10 +112,7 @@ function createModal(){
 
 
     $container.addEventListener('click', (event) => {
-
         const target = event.target;
-        console.log(target);
-
         if (target.closest('.btn-details')) {
             const $product = target.closest('.btn-details');
             const productId = $product.dataset.id;
@@ -124,7 +121,7 @@ function createModal(){
     });
 }
 
-createModal()
+createModal();
 
 function initSwiper() {
     if (swiperInstance) {
