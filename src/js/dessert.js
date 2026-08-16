@@ -1,4 +1,5 @@
 import {Spinner} from 'spin.js';
+import Swal from 'sweetalert2'
 import createDetailWindow from './dessert-detail.js';
 import getData from './api.js';
 
@@ -7,6 +8,11 @@ const $select = document.querySelector('.category-select');
 const $desserts = document.querySelector('.desserts-list');
 // const $loader = document.querySelector('.loader');
 const $loadMoreBtn = document.querySelector('.load-more-btn');
+
+
+let activeCategoryId = 'all';
+let page = 1;
+const limit = 8;
 
 async function renderCategories() {
     const loaderCat = document.querySelector('#categories-loader');
@@ -21,7 +27,6 @@ async function renderCategories() {
     });
 
     try{
-        // wrapperEl.classList.add('hidden');
         spinner.spin(loaderCat);
         const categories = await getData('/categories', { method: 'GET' });
         const list = categories.map(category => `
@@ -42,7 +47,10 @@ async function renderCategories() {
         $select.insertAdjacentHTML('beforeend', select);
     }
     catch(error){
-        console.log(error);
+        Swal.fire({
+            icon: "error",
+            text: "Error loading categories",
+        });
     }
     finally{
         spinner.stop();
@@ -50,13 +58,6 @@ async function renderCategories() {
         wrapperEl.classList.remove('hidden');
     }
 }
-
-renderCategories();
-
-let activeCategoryId = 'all';
-let page = 1;
-const limit = 8;
-
 
 async function renderDesserts(categoryId = 'all', isLoadMore = false) {
     const spinner = new Spinner({
@@ -125,7 +126,10 @@ async function renderDesserts(categoryId = 'all', isLoadMore = false) {
 
         }
     } catch (error) {
-        console.log(error);
+        Swal.fire({
+            icon: "error",
+            text: "Error loading categories",
+        });
     } finally {
         spinner.stop();
         loaderDessert.classList.add('hidden');
@@ -182,5 +186,6 @@ $loadMoreBtn.addEventListener('click', () => {
     renderDesserts(activeCategoryId, true);
 });
 
+renderCategories();
 
 renderDesserts(activeCategoryId);
