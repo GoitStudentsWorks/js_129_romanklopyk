@@ -1,9 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-.container{
-    /*background-color: #805454;*/
+.hidden {
+    display: none;
 }
 
+
+
+
+/*---------------------spinner animation---------------------------------*/
+
+@keyframes spinner-line-fade-more {
+    0%, 100% {
+        opacity: 0; /* minimum opacity */
+    }
+    1% {
+        opacity: 1;
+    }
+}
+
+@keyframes spinner-line-fade-quick {
+    0%, 39%, 100% {
+        opacity: 0.25; /* minimum opacity */
+    }
+    40% {
+        opacity: 1;
+    }
+}
+
+@keyframes spinner-line-fade-default {
+    0%, 100% {
+        opacity: 0.22; /* minimum opacity */
+    }
+    1% {
+        opacity: 1;
+    }
+}
+
+@keyframes spinner-line-shrink {
+    0%, 25%, 100% {
+        /* minimum scale and opacity */
+        transform: scale(0.5);
+        opacity: 0.25;
+    }
+    26% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/*-------------------end spinner animation----------------------------*/
 
 .dessert-title {
     font-family: 'Comfortaa', sans-serif;
@@ -13,7 +58,7 @@
     margin-bottom: 24px;
 }
 
-.dessert-subtitle {
+p.dessert-subtitle {
     font-family: 'Inter', sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -22,15 +67,15 @@
 }
 
 .category-list {
- display: none;
+    display: none;
 }
 
-.category-select{
+.category-select {
     width: 100%;
     max-width: 375px;
     padding: 8px 12px;
     border: 2px solid #202424;
-    border-radius:6px;
+    border-radius: 6px;
     font-size: 16px;
     font-family: 'Inter', sans-serif;
     outline: none;
@@ -48,9 +93,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    gap: 32px;
     position: relative;
+    margin-bottom: 40px;
 }
 
 .dessert-item {
@@ -60,10 +105,10 @@
     padding: 16px;
     border: 1px solid #080C0C;
     border-radius: 16px;
-    margin-bottom: 32px;
+
 }
 
-.dessert-img{
+.dessert-img {
     width: 100%;
     height: 228px;
     object-fit: cover;
@@ -120,6 +165,9 @@
     justify-content: center;
     align-items: center;
 }
+.load-more-wrapper{
+
+}
 
 .load-more-btn {
     background-color: #F19898;
@@ -129,60 +177,109 @@
     width: 100%;
     border-radius: 100px;
     padding: 12px 24px;
+    height: 44px;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: 600;
     color: #080C0C;
 }
 
+@media screen and (min-width: 768px) {
+    .desserts-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 20px;
+    }
+
+    .dessert-title {
+        text-align: left;
+    }
+
+    p.dessert-subtitle {
+        text-align: left;
+    }
+
+    .category-select {
+        width: 265px;
+    }
+
+    .desserts-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 32px 16px;
+        margin-bottom: 40px;
+    }
+
+    .dessert-item {
+        margin-bottom: 0;
+        width: calc((100% - 16px) / 2);
+    }
+
+    .load-more-wrapper{
+        display: flex;
+        justify-content: center;
+    }
+
+    .load-more-btn {
+        width: 344px;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .desserts-header{
+        flex-direction: column;
+        align-items: center;
+        gap:40px;
+        margin-bottom: 40px;
+    }
+    .dessert-title{
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    p.dessert-subtitle{
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .category-select{
+        display: none;
+    }
+
+    .category-list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 32px 24px;
+    }
+
+    .category-btn{
+        outline: none;
+        cursor: pointer;
+        background-color: transparent;
+        border: 2px solid #080C0C;
+        border-radius: 100px;
+        padding: 10px 24px;
+        transition: background-color 0.3s ease;
+    }
+
+    .category-btn.active {
+        background-color: #C07979;
+    }
 
 
-.load-more-btn {
+    .desserts-list{
+        gap: 40px 24px;
+    }
+
+    .dessert-item{
+        width: calc((100% - (24px * 3)) / 4);
+    }
+
+
 
 }
 
-.active {
-    color: red;
-}
-.hidden {
-    display: none;
-}
 
-@keyframes spinner-line-fade-more {
-    0%, 100% {
-        opacity: 0; /* minimum opacity */
-    }
-    1% {
-        opacity: 1;
-    }
-}
-
-@keyframes spinner-line-fade-quick {
-    0%, 39%, 100% {
-        opacity: 0.25; /* minimum opacity */
-    }
-    40% {
-        opacity: 1;
-    }
-}
-
-@keyframes spinner-line-fade-default {
-    0%, 100% {
-        opacity: 0.22; /* minimum opacity */
-    }
-    1% {
-        opacity: 1;
-    }
-}
-
-@keyframes spinner-line-shrink {
-    0%, 25%, 100% {
-        /* minimum scale and opacity */
-        transform: scale(0.5);
-        opacity: 0.25;
-    }
-    26% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}

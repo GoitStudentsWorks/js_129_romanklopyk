@@ -12,14 +12,14 @@ body.no-scroll {
     overflow: hidden;
 }
 
-
-/* Внутрішня картка */
 .dessert-modal {
     background: #F5FDFD;
     padding: 16px 24px 0 24px;
     display: flex;
     flex-direction: column;
     border-radius: 16px;
+    width: 100%;
+    max-width: 375px;
 }
 
 .close-modal-btn {

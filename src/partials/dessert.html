@@ -1,24 +1,27 @@
-<section id="desserts" class="dessert section">
-    <div class="container">
-        <h2 class="dessert-title">Солодощі</h2>
-        <p class="dessert-subtitle">Спробуйте наші смачні десерти, які вас здивують!</p>
-        <div class="category-wrapper hidden">
-            <ul class="category-list">
-                <li class="category-item" data-category-id="all">
-                    <button class="category-btn">Всі десерти</button>
-                </li>
-            </ul>
-            <select  name="category-select" class="category-select">
-                <option   value="all">Всі десерти</option>
-            </select>
+<section id="desserts" class="desserts section">
+    <div class="container desserts-container">
+        <div class="desserts-header">
+            <div>
+                <h2 class="dessert-title">Солодощі</h2>
+                <p class="dessert-subtitle">Спробуйте наші смачні десерти, які вас здивують!</p>
+            </div>
+            <div class="category-wrapper">
+                <ul class="category-list">
+                    <li class="category-item" data-category-id="all">
+                        <button class="category-btn active">Всі десерти</button>
+                    </li>
+                </ul>
+                <select name="category-select" class="category-select">
+                    <option value="all">Всі десерти</option>
+                </select>
+            </div>
         </div>
         <div id="categories-loader" style="position: relative; min-height: 60px;"></div>
-
         <ul class="desserts-list">
         </ul>
-
         <div class="desserts-loader" style="position: relative; min-height: 60px;"></div>
-
-        <button type="button" class="load-more-btn hidden">Завантажити ще</button>
+        <div class="load-more-wrapper">
+            <button type="button" class="load-more-btn hidden">Завантажити ще</button>
+        </div>
     </div>
 </section>
