@@ -3,6 +3,7 @@ import * as basicLightbox from 'basiclightbox';
 import 'basiclightbox/dist/basicLightbox.min.css';
 import 'css-star-rating/css/star-rating.css';
 import getData from './api.js';
+import Swal from 'sweetalert2';
 
 async function createDetailWindow(id) {
     const spinner = new Spinner({
@@ -75,7 +76,10 @@ async function createDetailWindow(id) {
         })
 
     } catch (error) {
-        console.log(error);
+        Swal.fire({
+            icon: "error",
+            text: "Error loading categories",
+        });
         $dessertDetails.close();
     } finally {
         spinner.stop();
