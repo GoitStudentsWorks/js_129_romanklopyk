@@ -17,7 +17,12 @@
   "author": "Roman Khlopyk rx@lyc2.org",
   "license": "ISC",
   "dependencies": {
+    "accordion-js": "^3.4.1",
+    "axios": "^1.19.0",
+    "basiclightbox": "^5.0.4",
+    "css-star-rating": "^1.3.1",
     "modern-normalize": "^3.0.1",
+    "spin.js": "^4.1.2",
     "vite-plugin-full-reload": "^1.2.0",
     "vite-plugin-html-inject": "^1.1.2"
   }
