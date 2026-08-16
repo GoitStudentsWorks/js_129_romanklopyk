@@ -1,5 +1,182 @@
-<section class="about section">
+<section class="about section" id="section-about">
     <div class="container">
-        about
+        <div class="about-content">
+            <!-- Title -->
+            <h2 class="about-title">Про нас</h2>
+
+            <!-- Text -->
+            <p class="about-text">
+                У нашій 'Солодкій Майстерні' ми створюємо неповторні солодкі
+                шедеври, що приносять радість та задоволення. Наша місія —
+                пропонувати високоякісні десерти, які поєднують у собі вишуканий
+                смак, свіжі інгредієнти та естетичний вигляд.
+            </p>
+
+            <!-- Galery -->
+            <div class="about-slider">
+                <div class="about-viewport swiper">
+                    <ul class="about-list swiper-wrapper">
+                        <li class="about-item swiper-slide">
+                            <picture>
+                                <source
+                                    media="(min-width: 1440px)"
+                                    srcset="
+                                        ./img/about-us/about-us-1-desk.jpg    1x,
+                                        ./img/about-us/about-us-1-desk-2x.jpg 2x
+                                    "
+                                />
+                                <source
+                                    media="(min-width: 768px)"
+                                    srcset="
+                                        ./img/about-us/about-us-1-tablet.jpg    1x,
+                                        ./img/about-us/about-us-1-tablet-2x.jpg 2x
+                                    "
+                                />
+                                <source
+                                    media="(max-width: 767px)"
+                                    srcset="
+                                        ./img/about-us/about-us-1-mob.jpg    1x,
+                                        ./img/about-us/about-us-1-mob-2x.jpg 2x
+                                    "
+                                />
+                                <img
+                                    class="about-image"
+                                    src="./img/about-us/about-us-1-mob.jpg"
+                                    alt="Приготування десерту"
+                                />
+                            </picture>
+                        </li>
+
+                        <li class="about-item swiper-slide">
+                            <picture>
+                                <source
+                                    media="(min-width: 1440px)"
+                                    srcset="
+                                        ./img/about-us/about-us-2-desk.jpg    1x,
+                                        ./img/about-us/about-us-2-desk-2x.jpg 2x
+                                    "
+                                />
+                                <source
+                                    media="(min-width: 768px)"
+                                    srcset="
+                                        ./img/about-us/about-us-2-tablet.jpg    1x,
+                                        ./img/about-us/about-us-2-tablet-2x.jpg 2x
+                                    "
+                                />
+                                <source
+                                    media="(max-width: 767px)"
+                                    srcset="
+                                        ./img/about-us/about-us-2-mob-2x.jpg 2x
+                                    "
+                                />
+                                <img
+                                    class="about-image"
+                                    src="./img/about-us/about-us-2-tablet.jpg"
+                                    alt="Команда Солодкої Майстерні"
+                                />
+                            </picture>
+                        </li>
+
+                        <li class="about-item swiper-slide">
+                            <picture>
+                                <source
+                                    media="(min-width: 1440px)"
+                                    srcset="
+                                        ./img/about-us/about-us-3-desk.jpg    1x,
+                                        ./img/about-us/about-us-3-desk-2x.jpg 2x
+                                    "
+                                />
+                                <source
+                                    media="(min-width: 768px)"
+                                    srcset="
+                                        ./img/about-us/about-us-3-tablet.jpg 1x
+                                    "
+                                />
+                                <source
+                                    media="(max-width: 767px)"
+                                    srcset="
+                                        ./img/about-us/about-us-3-mob.jpg    1x,
+                                        ./img/about-us/about-us-3-mob-2x.jpg 2x
+                                    "
+                                />
+                                <img
+                                    class="about-image"
+                                    src="./img/about-us/about-us-3-mob.jpg"
+                                    alt="Вітрина з десертами"
+                                />
+                            </picture>
+                        </li>
+
+                        <li class="about-item swiper-slide">
+                            <picture>
+                                <source
+                                    media="(min-width: 1440px)"
+                                    srcset="
+                                        ./img/about-us/about-us-4-desk.jpg    1x,
+                                        ./img/about-us/about-us-4-desk-2x.jpg 2x
+                                    "
+                                />
+                                <source
+                                    media="(min-width: 768px)"
+                                    srcset="
+                                        ./img/about-us/about-us-4-tablet.jpg    1x,
+                                        ./img/about-us/about-us-4-tablet-2x.jpg 2x
+                                    "
+                                />
+                                <source
+                                    media="(max-width: 767px)"
+                                    srcset="
+                                        ./img/about-us/about-us-4-mob.jpg    1x,
+                                        ./img/about-us/about-us-4-mob-2x.jpg 2x
+                                    "
+                                />
+                                <img
+                                    class="about-image"
+                                    src="./img/about-us/about-us-4-mob.jpg"
+                                    alt="Дівчина з десертом"
+                                />
+                            </picture>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Slider navigation -->
+                <button
+                    class="about-button about-button-prev"
+                    type="button"
+                    aria-label="Попередній слайд"
+                    tabindex="0"
+                >
+                    <svg
+                        class="about-button-icon"
+                        width="24"
+                        height="24"
+                        aria-hidden="true"
+                    >
+                        <use href="/img/sprite.svg#icon-arrow_back"></use>
+                    </svg>
+                </button>
+
+                <button
+                    class="about-button about-button-next"
+                    type="button"
+                    aria-label="Наступний слайд"
+                    tabindex="0"
+                >
+                    <svg
+                        class="about-button-icon"
+                        width="24"
+                        height="24"
+                        aria-hidden="true"
+                    >
+                        <use href="/img/sprite.svg#icon-arrow_forward"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Custom slider pagination -->
+        <div>
+            <nav class="about-pagination" aria-label="Slider pagination"></nav>
+        </div>
     </div>
 </section>
