@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Солодка майстерня</title>
+    <link rel="stylesheet" href="node_modules/css-star-rating/css/star-rating.css">
   <script type="module" crossorigin src="/goit-team-project-js-proj-8/index.js"></script>
-  <link rel="modulepreload" crossorigin href="/goit-team-project-js-proj-8/assets/vendor-MMQnTymT.js">
-  <link rel="stylesheet" crossorigin href="/goit-team-project-js-proj-8/assets/vendor-DeWSYDs2.css">
-  <link rel="stylesheet" crossorigin href="/goit-team-project-js-proj-8/assets/index-FRWCrBvH.css">
+  <link rel="modulepreload" crossorigin href="/goit-team-project-js-proj-8/assets/vendor-CHMthEz3.js">
+  <link rel="stylesheet" crossorigin href="/goit-team-project-js-proj-8/assets/vendor-Ctk_tfGv.css">
+  <link rel="stylesheet" crossorigin href="/goit-team-project-js-proj-8/assets/index-DgRGWyef.css">
 </head>
 <body>
 <header class="header">
@@ -26,10 +27,32 @@
     bestsellers
   </div>
 </section>
-<section class="dessert section">
-  <div class="container">
-    dessert
-  </div>
+<section id="desserts" class="desserts section">
+    <div class="container desserts-container">
+        <div class="desserts-header">
+            <div>
+                <h2 class="dessert-title">Солодощі</h2>
+                <p class="dessert-subtitle">Спробуйте наші смачні десерти, які вас здивують!</p>
+            </div>
+            <div class="category-wrapper hidden">
+                <ul class="category-list">
+                    <li class="category-item" data-category-id="all">
+                        <button class="category-btn active">Всі десерти</button>
+                    </li>
+                </ul>
+                <select name="category-select" class="category-select">
+                    <option value="all">Всі десерти</option>
+                </select>
+            </div>
+        </div>
+        <div id="categories-loader" style="position: relative; min-height: 60px;"></div>
+        <ul class="desserts-list">
+        </ul>
+        <div class="desserts-loader" style="position: relative; min-height: 60px;"></div>
+        <div class="load-more-wrapper">
+            <button type="button" class="load-more-btn hidden">Завантажити ще</button>
+        </div>
+    </div>
 </section>
 <section class="about section">
     <div class="container">
@@ -307,9 +330,7 @@
 </div>
 </footer>
 
-<div class="modal">
-  modal
-</div>
+
 
 </body>
 </html>
