@@ -38,7 +38,8 @@ async function renderCategories() {
             </option>
             `).join('');
 
-        return { list, select };
+        $category.insertAdjacentHTML('beforeend', list);
+        $select.insertAdjacentHTML('beforeend', select);
     }
     catch(error){
         console.log(error);
@@ -48,12 +49,9 @@ async function renderCategories() {
         loaderCat.remove();
         wrapperEl.classList.remove('hidden');
     }
-
 }
 
-const { list, select } = await renderCategories();
-$category.insertAdjacentHTML('beforeend', list);
-$select.insertAdjacentHTML('beforeend', select);
+renderCategories();
 
 let activeCategoryId = 'all';
 let page = 1;
