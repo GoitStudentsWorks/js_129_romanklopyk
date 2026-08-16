@@ -38,13 +38,17 @@ async function createDetailWindow(id) {
                              <path d="M12 4L4 12M4 4l8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
                         </svg>
                     </button>
-                    <img class="dessert-modal-img" src="${image}" alt="${name}" width="300" />
-                    <h3 class="dessert-modal-name">${name}</h3>
-                    <p class="dessert-modal-price">${price} грн</p>
-                    <div class="dessert-modal-rating">${createStars(rate)}</div>
-                    <p class="dessert-modal-description">${description}</p>
-                    <p class="dessert-modal-composition"><span>Склад</span>: ${composition}</p>
-                    <button class="dessert-modal-order-btn">Перейти до замовлення</button>        
+                    <div>
+                        <img class="dessert-modal-img" src="${image}" alt="${name}" width="300" />                    
+                    </div>
+                    <div>
+                        <h3 class="dessert-modal-name">${name}</h3>
+                        <p class="dessert-modal-price">${price} грн</p>
+                        <div class="dessert-modal-rating">${createStars(rate)}</div>
+                        <p class="dessert-modal-description">${description}</p>
+                        <p class="dessert-modal-composition"><span>Склад</span>: ${composition}</p>
+                        <button class="dessert-modal-order-btn">Перейти до замовлення</button>                    
+                    </div>                            
             </div>`;
 
         const closeBtn = $dessertDetails.element().querySelector('.close-modal-btn');

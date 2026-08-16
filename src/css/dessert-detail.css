@@ -13,16 +13,20 @@ body.no-scroll {
 }
 
 .dessert-modal {
-    background: #F5FDFD;
-    padding: 16px 24px 0 24px;
+    background-color: #F5FDFD;
+    padding: 64px 24px 0 24px;
     display: flex;
     flex-direction: column;
     border-radius: 16px;
     width: 100%;
     max-width: 375px;
+    position: relative;
 }
 
 .close-modal-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
     display: flex;
     width: 32px;
     height: 32px;
@@ -101,6 +105,43 @@ body.no-scroll {
     font-weight: 500;
     cursor: pointer;
     margin-bottom: 64px;
+}
+
+@media screen and (min-width: 768px) {
+    .dessert-modal-wrapper {
+        padding-inline: 32px;
+    }
+
+    .dessert-modal {
+        padding-inline: 32px;
+        width: 100%;
+        max-width: 768px;
+    }
+
+    .dessert-modal-order-btn {
+        width: 310px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .dessert-modal-wrapper {
+        padding-inline: 64px;
+    }
+    .dessert-modal {
+        padding: 64px;
+        width: 100%;
+        max-width: 1440px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 24px;
+    }
+    .dessert-modal-img {
+        margin-bottom: 48px;
+        width: 100%;
+        max-width: 580px;
+    }
+
 }
 
 

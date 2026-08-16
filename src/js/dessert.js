@@ -119,10 +119,12 @@ async function renderDesserts(categoryId = 'all', isLoadMore = false) {
             $loadMoreBtn.disabled = true;
             $loadMoreBtn.textContent = 'Більше немає десертів';
             $loadMoreBtn.classList.remove('hidden');
+            $loadMoreBtn.classList.add('disabled-btn');
         } else {
             $loadMoreBtn.disabled = false;
             $loadMoreBtn.textContent = 'Завантажити ще';
-            $loadMoreBtn.classList.remove('hidden');
+            $loadMoreBtn.classList.remove('hidden', 'disabled-btn');
+
         }
     } catch (error) {
         console.log(error);

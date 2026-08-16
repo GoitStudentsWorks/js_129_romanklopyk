@@ -4,7 +4,11 @@
     display: none;
 }
 
+.disabled-btn {
+    opacity: 0.5;
+    pointer-events: none;
 
+}
 
 
 /*---------------------spinner animation---------------------------------*/
@@ -159,21 +163,25 @@ p.dessert-subtitle {
     border-radius: 50%;
     outline: none;
     border: 2px solid #080C0C;
-
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.3s ease;
 }
-.load-more-wrapper{
 
+.dessert-details-btn:hover {
+    background-color: #F19898;
+}
+.dessert-details-btn:active {
+    background-color: #F5B6B6;
 }
 
 .load-more-btn {
     background-color: #F19898;
     outline: none;
     cursor: pointer;
-    border: none;
+    border: 2px solid #F19898;
     width: 100%;
     border-radius: 100px;
     padding: 12px 24px;
@@ -182,7 +190,17 @@ p.dessert-subtitle {
     font-size: 16px;
     font-weight: 600;
     color: #080C0C;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
 }
+
+.load-more-btn:hover {
+    border-color: #080C0C;
+}
+
+.load-more-btn:active {
+    background-color: #F5B6B6;
+}
+
 
 @media screen and (min-width: 768px) {
     .desserts-header {
