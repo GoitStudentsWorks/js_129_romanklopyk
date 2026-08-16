@@ -39,6 +39,9 @@
     cursor: pointer;
     padding: 12px;
     border-radius: 50px;
+
+    text-decoration: none;
+
     transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -196,6 +199,8 @@
         /* line-height: 24px; */
         line-height: 1.5;
         color: #080c0c;
+
+        text-decoration: none;
 
         transition:
             background-color 0.3s,
