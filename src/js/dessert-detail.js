@@ -4,6 +4,7 @@ import 'basiclightbox/dist/basicLightbox.min.css';
 import 'css-star-rating/css/star-rating.css';
 import getData from './api.js';
 import Swal from 'sweetalert2';
+import starIconsUrl from '../img/star-rating.icons.svg';
 
 async function createDetailWindow(id) {
     const spinner = new Spinner({
@@ -90,13 +91,13 @@ function createStars(value) {
     const stars = Array.from({ length: 5 }, () => `
     <div class="star">
       <svg class="star-empty">
-        <use href="../img/star-rating.icons.svg#star-empty"></use>
+        <use href="${starIconsUrl}#star-empty"></use>
       </svg>
       <svg class="star-half">
-        <use href="../img/star-rating.icons.svg#star-half"></use>
+        <use href="${starIconsUrl}#star-half"></use>
       </svg>
       <svg class="star-filled">
-        <use href="../img/star-rating.icons.svg#star-filled"></use>
+        <use href="${starIconsUrl}#star-filled"></use>
       </svg>
     </div>
   `).join('');

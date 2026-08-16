@@ -2,6 +2,11 @@
     background: rgba(0, 0, 0, 0.4);
 }
 
+
+.dessert-modal-rating .star-container .star svg {
+    fill: #080c0c;
+}
+
 .dessert-modal-wrapper {
     width: 100%;
     height: 100%;
@@ -71,6 +76,10 @@ body.no-scroll {
 
 .dessert-modal-rating  .star-container {
     margin-left: 0;
+}
+
+.dessert-modal-rating .rating.color-default .star-container .star svg {
+    fill: #080c0c !important;
 }
 
 .dessert-modal-description {
