@@ -4,7 +4,6 @@ import 'basiclightbox/dist/basicLightbox.min.css';
 import 'css-star-rating/css/star-rating.css';
 import getData from './api.js';
 import Swal from 'sweetalert2';
-import starIconsUrl from '../img/star-rating.icons.svg';
 
 async function createDetailWindow(id) {
     const spinner = new Spinner({
@@ -90,14 +89,14 @@ async function createDetailWindow(id) {
 function createStars(value) {
     const stars = Array.from({ length: 5 }, () => `
     <div class="star">
-      <svg class="star-empty">
-        <use href="${starIconsUrl}#star-empty"></use>
+      <svg class="star-empty" viewBox="0 0 34 32" aria-hidden="true">
+        <path d="M33.412 12.395l-11.842-1.021-4.628-10.904-4.628 10.92-11.842 1.005 8.993 7.791-2.701 11.579 10.179-6.144 10.179 6.144-2.685-11.579 8.976-7.791zM16.941 22.541l-6.193 3.739 1.647-7.049-5.468-4.744 7.214-.626 2.8-6.638 2.816 6.654 7.214.626-5.468 4.744 1.647 7.049-6.209-3.755z" />
       </svg>
-      <svg class="star-half">
-        <use href="${starIconsUrl}#star-half"></use>
+      <svg class="star-half" viewBox="0 0 34 32" aria-hidden="true">
+        <path d="M33.412 12.395 21.57 11.374 16.942.47 12.314 11.39.472 12.395l8.993 7.791-2.701 11.579 10.179-6.144 10.179 6.144-2.685-11.579 8.976-7.791ZM16.941 22.541c0 0-.298-14.646 0-15.318l2.816 6.654 7.214.626-5.468 4.744 1.647 7.049Z" />
       </svg>
-      <svg class="star-filled">
-        <use href="${starIconsUrl}#star-filled"></use>
+      <svg class="star-filled" viewBox="0 0 34 32" aria-hidden="true">
+        <path d="M16.941 25.621 27.12 31.765l-2.701-11.579 8.993-7.791-11.842-1.005L16.942.47l-4.628 10.92L.472 12.395l8.993 7.791-2.701 11.579Z" />
       </svg>
     </div>
   `).join('');
