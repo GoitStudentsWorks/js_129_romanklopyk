@@ -1,18 +1,14 @@
-@font-face {
-    font-family: 'Comfortaa';
-    src: url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap') format('woff2');
-    font-style: normal;
-    font-weight: 300 700;
-    font-display: swap;
-}
+/*fonts*/
 
-@font-face {
-    font-family: 'Work Sans';
-    src: url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap') format('woff2');
-    font-style: normal;
-    font-weight: 100 900;
-    font-display: swap;
-}
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Work+Sans:wght@100..900&display=swap');
+
+
+
+
+
+
+/*-----------------------------------------------------------------------------------------------------*/
 
 html {
     scroll-behavior: smooth;
