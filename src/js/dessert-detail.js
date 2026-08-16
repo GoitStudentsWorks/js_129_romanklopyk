@@ -78,7 +78,7 @@ async function createDetailWindow(id) {
     } catch (error) {
         Swal.fire({
             icon: "error",
-            text: "Error loading categories",
+
         });
         $dessertDetails.close();
     } finally {

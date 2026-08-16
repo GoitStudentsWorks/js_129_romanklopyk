@@ -90,7 +90,6 @@ async function renderDesserts(categoryId = 'all', isLoadMore = false) {
 
 
         const { totalItems, desserts } = await getData('/desserts', { method: 'GET', params });
-        console.log({ totalItems, desserts });
 
         const markup = desserts.map(dessert => `
         <li class="dessert-item">
@@ -112,7 +111,6 @@ async function renderDesserts(categoryId = 'all', isLoadMore = false) {
         $desserts.insertAdjacentHTML('beforeend', markup);
 
         const loadedElements = $desserts.children.length;
-        console.log({ loadedElements });
 
         if (loadedElements >= totalItems) {
             $loadMoreBtn.disabled = true;
