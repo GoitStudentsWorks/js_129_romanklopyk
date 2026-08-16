@@ -1,6 +1,6 @@
-import{a as C,S as v,b as $,c as E,N as S,P as M,A as x}from"./assets/vendor-CHMthEz3.js";(function(){const e=document.createElement("link").relList;if(e&&e.supports&&e.supports("modulepreload"))return;for(const t of document.querySelectorAll('link[rel="modulepreload"]'))r(t);new MutationObserver(t=>{for(const o of t)if(o.type==="childList")for(const n of o.addedNodes)n.tagName==="LINK"&&n.rel==="modulepreload"&&r(n)}).observe(document,{childList:!0,subtree:!0});function s(t){const o={};return t.integrity&&(o.integrity=t.integrity),t.referrerPolicy&&(o.referrerPolicy=t.referrerPolicy),t.crossOrigin==="use-credentials"?o.credentials="include":t.crossOrigin==="anonymous"?o.credentials="omit":o.credentials="same-origin",o}function r(t){if(t.ep)return;t.ep=!0;const o=s(t);fetch(t.href,o)}})();C.defaults.baseURL="https://deserts-store.b.goit.study/api";async function y(a,e={}){try{return(await C(a,e)).data}catch(s){console.log(s)}}console.log("utils.js");console.log("bestsellers");async function k(a){const e=new v({lines:12,length:6,width:4,radius:8,color:"#e39622"}),s=$.create(`
+import{a as $,S as v,b as E,c as y,d as S,N as x,P as M,A as k}from"./assets/vendor-lagkIt2Q.js";(function(){const e=document.createElement("link").relList;if(e&&e.supports&&e.supports("modulepreload"))return;for(const s of document.querySelectorAll('link[rel="modulepreload"]'))n(s);new MutationObserver(s=>{for(const r of s)if(r.type==="childList")for(const o of r.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&n(o)}).observe(document,{childList:!0,subtree:!0});function t(s){const r={};return s.integrity&&(r.integrity=s.integrity),s.referrerPolicy&&(r.referrerPolicy=s.referrerPolicy),s.crossOrigin==="use-credentials"?r.credentials="include":s.crossOrigin==="anonymous"?r.credentials="omit":r.credentials="same-origin",r}function n(s){if(s.ep)return;s.ep=!0;const r=t(s);fetch(s.href,r)}})();console.log("bestsellers");$.defaults.baseURL="https://deserts-store.b.goit.study/api";async function b(a,e={}){try{return(await $(a,e)).data}catch(t){console.log(t)}}async function q(a){const e=new v({lines:12,length:6,width:4,radius:8,color:"#e39622"}),t=E.create(`
         <div class="dessert-loader" style="position: relative; min-height: 200px;"></div>
-    `,{closable:!1,className:"dessert-modal-wrapper",onClose:()=>{document.body.classList.remove("no-scroll")}});document.body.classList.add("no-scroll"),s.show();const r=s.element().querySelector(".dessert-loader");e.spin(r);try{const{name:t,description:o,composition:n,price:u,rate:p,image:c}=await y(`/desserts/${a}`,{method:"GET"});s.element().innerHTML=`
+    `,{closable:!1,className:"dessert-modal-wrapper",onClose:()=>{document.body.classList.remove("no-scroll")}});document.body.classList.add("no-scroll"),t.show();const n=t.element().querySelector(".dessert-loader");e.spin(n);try{const{name:s,description:r,composition:o,price:u,rate:p,image:c}=await b(`/desserts/${a}`,{method:"GET"});t.element().innerHTML=`
             <div class="dessert-modal">
                     <button class="close-modal-btn"  aria-label="Закрити">
                         <svg width="24" height="24" viewBox="0 0 16 16" fill="none">
@@ -8,17 +8,17 @@ import{a as C,S as v,b as $,c as E,N as S,P as M,A as x}from"./assets/vendor-CHM
                         </svg>
                     </button>
                     <div>
-                        <img class="dessert-modal-img" src="${c}" alt="${t}" width="300" />                    
+                        <img class="dessert-modal-img" src="${c}" alt="${s}" width="300" />                    
                     </div>
                     <div>
-                        <h3 class="dessert-modal-name">${t}</h3>
+                        <h3 class="dessert-modal-name">${s}</h3>
                         <p class="dessert-modal-price">${u} грн</p>
-                        <div class="dessert-modal-rating">${q(p)}</div>
-                        <p class="dessert-modal-description">${o}</p>
-                        <p class="dessert-modal-composition"><span>Склад</span>: ${n}</p>
+                        <div class="dessert-modal-rating">${P(p)}</div>
+                        <p class="dessert-modal-description">${r}</p>
+                        <p class="dessert-modal-composition"><span>Склад</span>: ${o}</p>
                         <button class="dessert-modal-order-btn">Перейти до замовлення</button>                    
                     </div>                            
-            </div>`,s.element().querySelector(".close-modal-btn").addEventListener("click",()=>{s.close()});const w=document.querySelector(".dessert-modal-wrapper");w.addEventListener("click",h=>{h.target===w&&s.close()}),document.addEventListener("keydown",h=>{h.key==="Escape"&&s.close()})}catch(t){console.log(t),s.close()}finally{e.stop()}}function q(a){const e=Array.from({length:5},()=>`
+            </div>`,t.element().querySelector(".close-modal-btn").addEventListener("click",()=>{t.close()});const L=document.querySelector(".dessert-modal-wrapper");L.addEventListener("click",h=>{h.target===L&&t.close()}),document.addEventListener("keydown",h=>{h.key==="Escape"&&t.close()})}catch{y.fire({icon:"error",text:"Error loading categories"}),t.close()}finally{e.stop()}}function P(a){const e=Array.from({length:5},()=>`
     <div class="star">
       <svg class="star-empty">
         <use href="../img/star-rating.icons.svg#star-empty"></use>
@@ -30,23 +30,23 @@ import{a as C,S as v,b as $,c as E,N as S,P as M,A as x}from"./assets/vendor-CHM
         <use href="../img/star-rating.icons.svg#star-filled"></use>
       </svg>
     </div>
-  `).join("");function s(t){const o=Math.round(Number(t)*2)/2,n=Math.floor(o);return o%1!==0?`value-${n} half`:`value-${n}`}return`
-    <div class="rating ${s(a)} color-default ">
+  `).join("");function t(s){const r=Math.round(Number(s)*2)/2,o=Math.floor(r);return r%1!==0?`value-${o} half`:`value-${o}`}return`
+    <div class="rating ${t(a)} color-default ">
       <div class="star-container">
         ${e}
       </div>
     </div>
-  `}const d=document.querySelector(".category-list"),b=document.querySelector(".category-select"),m=document.querySelector(".desserts-list"),i=document.querySelector(".load-more-btn");async function P(){const a=document.querySelector("#categories-loader"),e=document.querySelector(".category-wrapper"),s=new v({lines:12,length:6,width:4,radius:8,color:"#d18a1f"});try{s.spin(a);const r=await y("/categories",{method:"GET"}),t=r.map(n=>`
-                <li class="category-item" data-category-id="${n._id}">
+  `}const d=document.querySelector(".category-list"),w=document.querySelector(".category-select"),m=document.querySelector(".desserts-list"),i=document.querySelector(".load-more-btn");let l="all",g=1;const A=8;async function H(){const a=document.querySelector("#categories-loader"),e=document.querySelector(".category-wrapper"),t=new v({lines:12,length:6,width:4,radius:8,color:"#d18a1f"});try{t.spin(a);const n=await b("/categories",{method:"GET"}),s=n.map(o=>`
+                <li class="category-item" data-category-id="${o._id}">
                     <button class="category-btn" >
-                        ${n.name}
+                        ${o.name}
                     </button>   
                 </li>
-            `).join(""),o=r.map(n=>`
+            `).join(""),r=n.map(o=>`
             <option
-                    value="${n._id}">${n.name}
+                    value="${o._id}">${o.name}
             </option>
-            `).join("");d.insertAdjacentHTML("beforeend",t),b.insertAdjacentHTML("beforeend",o)}catch(r){console.log(r)}finally{s.stop(),a.remove(),e.classList.remove("hidden")}}P();let l="all",g=1;const j=8;async function f(a="all",e=!1){const s=new v({lines:12,length:6,width:4,radius:8,color:"#e39622"}),r=document.querySelector(".desserts-loader");try{const t={limit:j,sortName:"name",sortDirect:"asc",page:g};a!=="all"&&(t.category=a),e||(m.innerHTML=""),r.classList.remove("hidden"),s.spin(r),i.disabled=!0,i.classList.add("hidden");const{totalItems:o,desserts:n}=await y("/desserts",{method:"GET",params:t});console.log({totalItems:o,desserts:n});const u=n.map(c=>`
+            `).join("");d.insertAdjacentHTML("beforeend",s),w.insertAdjacentHTML("beforeend",r)}catch{y.fire({icon:"error",text:"Error loading categories"})}finally{t.stop(),a.remove(),e.classList.remove("hidden")}}async function f(a="all",e=!1){const t=new v({lines:12,length:6,width:4,radius:8,color:"#e39622"}),n=document.querySelector(".desserts-loader");try{const s={limit:A,sortName:"name",sortDirect:"asc",page:g};a!=="all"&&(s.category=a),e||(m.innerHTML=""),n.classList.remove("hidden"),t.spin(n),i.disabled=!0,i.classList.add("hidden");const{totalItems:r,desserts:o}=await b("/desserts",{method:"GET",params:s});console.log({totalItems:r,desserts:o});const u=o.map(c=>`
         <li class="dessert-item">
             <img class="dessert-img" src="${c.image}" alt="${c.name}" width=300 class="dessert-img">
             <p class="dessert-category">${c.category.name}</p>
@@ -61,10 +61,10 @@ import{a as C,S as v,b as $,c as E,N as S,P as M,A as x}from"./assets/vendor-CHM
                 </button>
             </div>
         </li>
-    `).join("");m.insertAdjacentHTML("beforeend",u);const p=m.children.length;console.log({loadedElements:p}),p>=o?(i.disabled=!0,i.textContent="Більше немає десертів",i.classList.remove("hidden"),i.classList.add("disabled-btn")):(i.disabled=!1,i.textContent="Завантажити ще",i.classList.remove("hidden","disabled-btn"))}catch(t){console.log(t)}finally{s.stop(),r.classList.add("hidden")}}A(m);function A(a){a.addEventListener("click",e=>{if(e.target.closest(".dessert-details-btn")){const s=e.target.closest(".dessert-details-btn").dataset.id;k(s)}})}d.addEventListener("click",a=>{if(a.target.closest(".category-item")){l=a.target.closest(".category-item").dataset.categoryId,g=1,i.disabled=!1,i.textContent="Завантажити ще";const e=d.children;Array.from(e).forEach(s=>{s.querySelector("button").classList.remove("active")}),a.target.closest(".category-item > button").classList.add("active"),b.value=l,f(l)}});b.addEventListener("change",a=>{i.disabled=!1,i.textContent="Завантажити ще",l=a.target.value,g=1;const e=d.children;Array.from(e).forEach(s=>{s.querySelector("button").classList.remove("active")}),d.querySelector(`[data-category-id="${l}"] > button`).classList.add("active"),console.log(l),f(l)});i.addEventListener("click",()=>{i.disabled||(g+=1,f(l,!0))});f(l);console.log("modal");console.log("about.js");console.log("feedback.js");const L=document.getElementById("reviews-container"),H=document.getElementById("loader"),N=document.getElementById("toast-container");function T(a){const e=document.createElement("div");e.className="toast",e.textContent=a,N.appendChild(e),setTimeout(()=>e.remove(),4e3)}async function B(){try{const a=await fetch("https://deserts-store.b.goit.study/api/feedbacks");if(!a.ok)throw new Error("Помилка сервера при отриманні відгуків");const r=((await a.json()).feedbacks||[]).slice(0,10);D(r),O()}catch{T("Не вдалося завантажити дані. Повторіть спробу пізніше.")}finally{H.classList.add("hidden")}}function D(a){L.innerHTML="",a.forEach(e=>{const s=e.rate||5,t=(Math.round(s*2)/2).toFixed(1).replace(".",""),o=document.createElement("div");o.className="swiper-slide",o.innerHTML=`
+    `).join("");m.insertAdjacentHTML("beforeend",u);const p=m.children.length;console.log({loadedElements:p}),p>=r?(i.disabled=!0,i.textContent="Більше немає десертів",i.classList.remove("hidden"),i.classList.add("disabled-btn")):(i.disabled=!1,i.textContent="Завантажити ще",i.classList.remove("hidden","disabled-btn"))}catch{y.fire({icon:"error",text:"Error loading categories"})}finally{t.stop(),n.classList.add("hidden")}}N(m);function N(a){a.addEventListener("click",e=>{if(e.target.closest(".dessert-details-btn")){const t=e.target.closest(".dessert-details-btn").dataset.id;q(t)}})}d.addEventListener("click",a=>{if(a.target.closest(".category-item")){l=a.target.closest(".category-item").dataset.categoryId,g=1,i.disabled=!1,i.textContent="Завантажити ще";const e=d.children;Array.from(e).forEach(t=>{t.querySelector("button").classList.remove("active")}),a.target.closest(".category-item > button").classList.add("active"),w.value=l,f(l)}});w.addEventListener("change",a=>{i.disabled=!1,i.textContent="Завантажити ще",l=a.target.value,g=1;const e=d.children;Array.from(e).forEach(t=>{t.querySelector("button").classList.remove("active")}),d.querySelector(`[data-category-id="${l}"] > button`).classList.add("active"),console.log(l),f(l)});i.addEventListener("click",()=>{i.disabled||(g+=1,f(l,!0))});H();f(l);console.log("modal");console.log("about.js");console.log("feedback.js");const C=document.getElementById("reviews-container"),T=document.getElementById("loader"),j=document.getElementById("toast-container");function B(a){const e=document.createElement("div");e.className="toast",e.textContent=a,j.appendChild(e),setTimeout(()=>e.remove(),4e3)}async function D(){try{const a=await fetch("https://deserts-store.b.goit.study/api/feedbacks");if(!a.ok)throw new Error("Помилка сервера при отриманні відгуків");const n=((await a.json()).feedbacks||[]).slice(0,10);O(n),I()}catch{B("Не вдалося завантажити дані. Повторіть спробу пізніше.")}finally{T.classList.add("hidden")}}function O(a){C.innerHTML="",a.forEach(e=>{const t=e.rate||5,s=(Math.round(t*2)/2).toFixed(1).replace(".",""),r=document.createElement("div");r.className="swiper-slide",r.innerHTML=`
             <div class="review-card">
                 <div class="stars-wrapper">
-                    <div class="star-rating rating-${t}">
+                    <div class="star-rating rating-${s}">
                         <span class="star"></span>
                         <span class="star"></span>
                         <span class="star"></span>
@@ -75,5 +75,5 @@ import{a as C,S as v,b as $,c as E,N as S,P as M,A as x}from"./assets/vendor-CHM
                 <p class="review-text">"${e.description||""}"</p>
                 <h4 class="client-name">${e.author||"Гість"}</h4>
             </div>
-        `,L.appendChild(o)})}function O(){new E(".reviews-swiper",{modules:[S,M],slidesPerView:1,spaceBetween:24,loop:!1,navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},pagination:{el:".swiper-pagination",clickable:!0},breakpoints:{320:{slidesPerView:1},768:{slidesPerView:3},1440:{slidesPerView:3}}})}document.addEventListener("DOMContentLoaded",B);new x(".accordion-container",{duration:400,showMultiple:!1});
+        `,C.appendChild(r)})}function I(){new S(".reviews-swiper",{modules:[x,M],slidesPerView:1,spaceBetween:24,loop:!1,navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},pagination:{el:".swiper-pagination",clickable:!0},breakpoints:{320:{slidesPerView:1},768:{slidesPerView:3},1440:{slidesPerView:3}}})}document.addEventListener("DOMContentLoaded",D);new k(".accordion-container",{duration:400,showMultiple:!1});
 //# sourceMappingURL=index.js.map
