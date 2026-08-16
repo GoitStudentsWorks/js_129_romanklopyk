@@ -1,4 +1,4 @@
-import  { Spinner } from 'spin.js';
+import { Spinner } from 'spin.js';
 import * as basicLightbox from 'basiclightbox';
 import 'basiclightbox/dist/basicLightbox.min.css';
 import 'css-star-rating/css/star-rating.css';
@@ -30,7 +30,14 @@ async function createDetailWindow(id) {
     spinner.spin(loaderEl);
 
     try {
-        const { name, description, composition, price, rate, image } = await getData(`/desserts/${id}`, { method: 'GET' });
+        const {
+            name,
+            description,
+            composition,
+            price,
+            rate,
+            image,
+        } = await getData(`/desserts/${id}`, { method: 'GET' });
         $dessertDetails.element().innerHTML = `
             <div class="dessert-modal">
                     <button class="close-modal-btn"  aria-label="Закрити">
@@ -51,17 +58,26 @@ async function createDetailWindow(id) {
                     </div>                            
             </div>`;
 
-        const closeBtn = $dessertDetails.element().querySelector('.close-modal-btn');
-        closeBtn.addEventListener('click', () => {
+        const $closeBtn = $dessertDetails.element().querySelector('.close-modal-btn');
+        $closeBtn.addEventListener('click', () => {
             $dessertDetails.close();
         });
+        const $modalWrapper = document.querySelector('.dessert-modal-wrapper');
+        $modalWrapper.addEventListener('click', e => {
+            if (e.target === $modalWrapper) {
+                $dessertDetails.close();
+            }
+        });
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') {
+                $dessertDetails.close();
+            }
+        })
 
-    }
-    catch (error) {
+    } catch (error) {
         console.log(error);
         $dessertDetails.close();
-    }
-    finally {
+    } finally {
         spinner.stop();
     }
 }
@@ -80,12 +96,14 @@ function createStars(value) {
       </svg>
     </div>
   `).join('');
+
     function getRatingClass(rate) {
         const roundedRate = Math.round(Number(rate) * 2) / 2;
         const integerPart = Math.floor(roundedRate);
         const hasHalf = roundedRate % 1 !== 0;
         return hasHalf ? `value-${integerPart} half` : `value-${integerPart}`;
     }
+
     const ratingClass = getRatingClass(value);
     return `
     <div class="rating ${ratingClass} color-default ">

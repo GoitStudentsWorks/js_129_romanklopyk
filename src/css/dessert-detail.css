@@ -105,6 +105,11 @@ body.no-scroll {
     font-weight: 500;
     cursor: pointer;
     margin-bottom: 64px;
+    transition: background 0.3s ease;
+}
+
+.dessert-modal-order-btn:hover {
+    background: #F5B6B6;
 }
 
 @media screen and (min-width: 768px) {
