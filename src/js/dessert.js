@@ -5,6 +5,9 @@ import getData from './api.js';
 
 const $category = document.querySelector('.category-list');
 const $select = document.querySelector('.category-select');
+const $categoryWrapper = document.querySelector('.category-wrapper');
+const $categoryTrigger = document.querySelector('.category-select-trigger');
+const $categoryValue = document.querySelector('.category-select-value');
 const $desserts = document.querySelector('.desserts-list');
 // const $loader = document.querySelector('.loader');
 const $loadMoreBtn = document.querySelector('.load-more-btn');
@@ -157,7 +160,29 @@ $category.addEventListener('click', e => {
         });
         e.target.closest('.category-item > button').classList.add('active');
         $select.value = activeCategoryId;
+        $categoryValue.textContent = e.target.closest('.category-item > button').textContent.trim();
+        $categoryWrapper.classList.remove('is-open');
+        $categoryTrigger.setAttribute('aria-expanded', 'false');
         renderDesserts(activeCategoryId);
+    }
+});
+
+$categoryTrigger.addEventListener('click', () => {
+    const isOpen = $categoryWrapper.classList.toggle('is-open');
+    $categoryTrigger.setAttribute('aria-expanded', String(isOpen));
+});
+
+document.addEventListener('click', e => {
+    if (!$categoryWrapper.contains(e.target)) {
+        $categoryWrapper.classList.remove('is-open');
+        $categoryTrigger.setAttribute('aria-expanded', 'false');
+    }
+});
+
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+        $categoryWrapper.classList.remove('is-open');
+        $categoryTrigger.setAttribute('aria-expanded', 'false');
     }
 });
 
@@ -171,6 +196,7 @@ $select.addEventListener('change', e => {
         child.querySelector('button').classList.remove('active');
     });
     $category.querySelector(`[data-category-id="${activeCategoryId}"] > button`).classList.add('active');
+    $categoryValue.textContent = $category.querySelector(`[data-category-id="${activeCategoryId}"] > button`).textContent.trim();
     // renderDesserts(activeCategoryId);
     console.log(activeCategoryId);
     renderDesserts(activeCategoryId);
