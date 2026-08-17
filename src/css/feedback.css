@@ -18,11 +18,13 @@
     --color-dot-active: #080C0C;
 }
 
+
 .hidden {
     display: none !important;
 }
 
-.reviews-section {
+
+.feedback-section {
     width: 100%;
     margin: 0 auto;
     text-align: center;
@@ -47,7 +49,7 @@
 }
 
 .reviews-subtitle {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     text-align: center;
     color: var(--color-text);
@@ -125,14 +127,14 @@
 }
 
 .review-text {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     margin: 0 0 12px 0;
     flex-grow: 1;
 }
 
 .client-name {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 600;
     margin: 0;
 }

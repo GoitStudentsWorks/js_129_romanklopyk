@@ -80,7 +80,7 @@ function initSwiper() {
         },
         
         pagination: {
-            el: '.swiper-pagination',
+            el: '#reviews-pagination',//'.swiper-pagination',
             clickable: true,
         },
         
