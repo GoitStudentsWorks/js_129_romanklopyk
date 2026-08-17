@@ -27,6 +27,7 @@
 .feedback-section {
     width: 100%;
     margin: 0 auto;
+    padding: 64px 0;
     text-align: center;
     box-sizing: border-box;
     background-color: var(--color-background);
@@ -66,7 +67,7 @@
 
 .reviews-swiper {
     width: 100%;
-    padding: 10px 5px !important;
+    /*padding: 10px 5px !important;*/
 }
 
 .review-card {
@@ -142,10 +143,7 @@
 /* ==========================================================================
 ДЛЯ МОБІЛЬНОЇ ВЕРСІЇ (Від 320px до 767px)
    ========================================================================== */
-.reviews-section {
-    padding: 64px 20px;
-    /* Точні мобільні падінги з Figma */
-}
+
 
 .reviews-header {
     gap: 24px;
@@ -353,9 +351,9 @@
    3. ПЛАНШЕТНИЙ АДАПТИВ (min-width: 768px)
    ========================================================================== */
 @media (min-width: 768px) {
-    .reviews-section {
+   /* .reviews-section {
         padding: 64px 32px;
-    }
+    }*/
 
     .reviews-header {
         max-width: 704px;
@@ -384,9 +382,9 @@
         padding-bottom: 0;
     }
 
-    .reviews-swiper {
+ /*   .reviews-swiper {
         max-width: 704px;
-    }
+    }*/
 
     /* Розносимо стрілочки  */
     .carousel-container .carousel-btn {
@@ -416,7 +414,7 @@
     }
     
     .review-card {
-        min-width: calc(100%/3 - 12px);
+        min-width: calc(100%/3 - 48px);
         padding: 16px;
     }
 
@@ -425,10 +423,12 @@
     
     /* ==========================================================================4. ДЕСКТОПНИЙ АДАПТИВ (min-width: 1440px)========================================================================== */
     @media (min-width: 1440px) {
-        .reviews-section {
-            padding: 60px 0;
-            max-width: 1440px;
+        .feedback-section {
+                width: 100%;
+                margin: 0 auto;
+                padding: 80px 0;
         }
+      
     
         .reviews-header {
             max-width: 1120px;
@@ -441,13 +441,14 @@
         }
     
         .carousel-container {
-            max-width: 1120px;
+            max-width: 1312px;
             margin: 0 auto;
             padding-bottom: 0;
         }
     
         .reviews-swiper {
-            max-width: 1120px;
+          
+            max-width: 1312px;
         }
     
         .carousel-container .carousel-btn {
@@ -474,7 +475,7 @@
         }
     
         .review-card {
-            min-width: calc(33.333% - 16px);
+            min-width: calc(33.333% - 48px);
             padding: 32px;
         }
     }
