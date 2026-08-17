@@ -1,0 +1,110 @@
+.mob-menu {
+    font-family: 'Inter', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f5fdfd;
+    z-index: 999;
+
+    padding: 24px 20px;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.mob-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.mob-menu-container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.mob-menu-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mob-menu-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.svg-icon {
+    fill: #080c0c;
+    transition: fill 0.3s ease;
+}
+
+.mob-menu-button:hover .svg-icon,
+.mob-menu-button:focus .svg-icon {
+    fill: #f19898;
+}
+
+.mob-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.mob-link {
+    font-weight: 400;
+    font-size: 16px;
+
+    /* line-height: 24px; */
+    line-height: 1.5;
+    color: #080c0c;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.mob-link:hover,
+.mob-link:focus {
+    color: #f19898;
+}
+
+.mob-menu .nav-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 44px;
+    margin-top: auto;
+
+    background-color: #f19898;
+    border: 1px solid #f19898;
+    border-radius: 100px;
+    padding-block: 8px;
+    padding-inline: 20px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #080c0c;
+    text-decoration: none;
+}
+
+.mob-menu .button-text {
+    display: inline-block;
+}

@@ -1,0 +1,157 @@
+.basicLightbox {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.dessert-modal-wrapper {
+    width: 100%;
+    height: 100%;
+    padding-inline: 20px;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+.dessert-modal {
+    background-color: #F5FDFD;
+    padding: 64px 24px 0 24px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 375px;
+    position: relative;
+}
+
+.close-modal-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    display: flex;
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    justify-content: flex-end;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    background-color: transparent;
+    margin-bottom: 16px;
+}
+
+.dessert-modal-img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 24px;
+}
+
+
+.dessert-modal-name {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #080C0C;
+    margin-bottom: 8px;
+}
+
+.dessert-modal-price {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 20px;
+    color: #080C0C;
+    margin-bottom: 24px;
+}
+
+.dessert-modal-rating {
+    font-size: 18px;
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.dessert-modal-rating  .star-container {
+    margin-left: 0;
+}
+
+.dessert-modal-rating .rating.color-default .star-container .star svg {
+    fill: #080c0c !important;
+}
+
+.dessert-modal-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #080C0C;
+    margin-bottom: 24px;
+}
+
+
+.dessert-modal-composition {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #080C0C;
+    margin-bottom: 24px;
+}
+
+.dessert-modal-composition span {
+    font-weight: 700;
+}
+
+.dessert-modal-order-btn {
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 100px;
+    background: #F19898;
+    color: #080C0C;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 64px;
+    transition: background 0.3s ease;
+}
+
+.dessert-modal-order-btn:hover {
+    background: #F5B6B6;
+}
+
+@media screen and (min-width: 768px) {
+    .dessert-modal-wrapper {
+        padding-inline: 32px;
+    }
+
+    .dessert-modal {
+        padding-inline: 32px;
+        width: 100%;
+        max-width: 768px;
+    }
+
+    .dessert-modal-order-btn {
+        width: 310px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .dessert-modal-wrapper {
+        padding-inline: 64px;
+    }
+    .dessert-modal {
+        padding: 64px;
+        width: 100%;
+        max-width: 1440px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 24px;
+    }
+    .dessert-modal-img {
+        margin-bottom: 48px;
+        width: 100%;
+        max-width: 580px;
+    }
+
+}
+
+
+
