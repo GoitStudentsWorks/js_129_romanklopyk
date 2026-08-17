@@ -99,5 +99,5 @@ import{a as k,S as b,b as N,c as L,d as B,N as P,P as q,i as A,A as I}from"./ass
                 <p class="review-text">"${t.description||""}"</p>
                 <h4 class="client-name">${t.author||"Гість"}</h4>
             </div>
-        `,S.appendChild(a)})}function X(){new B(".reviews-swiper",{modules:[P,q],slidesPerView:1,spaceBetween:24,loop:!1,navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},pagination:{el:".swiper-pagination",clickable:!0},breakpoints:{320:{slidesPerView:1},768:{slidesPerView:3},1440:{slidesPerView:3}}})}document.addEventListener("DOMContentLoaded",J);new I(".accordion-container",{duration:400,showMultiple:!1});
+        `,S.appendChild(a)})}function X(){new B(".reviews-swiper",{modules:[P,q],slidesPerView:1,spaceBetween:24,loop:!1,navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},pagination:{el:"#reviews-pagination",clickable:!0},breakpoints:{320:{slidesPerView:1},768:{slidesPerView:3},1440:{slidesPerView:3}}})}document.addEventListener("DOMContentLoaded",J);new I(".accordion-container",{duration:400,showMultiple:!1});
 //# sourceMappingURL=index.js.map
