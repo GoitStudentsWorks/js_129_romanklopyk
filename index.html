@@ -7,7 +7,7 @@
   <script type="module" crossorigin src="/goit-team-project-js-proj-8/index.js"></script>
   <link rel="modulepreload" crossorigin href="/goit-team-project-js-proj-8/assets/vendor-BPsa392G.js">
   <link rel="stylesheet" crossorigin href="/goit-team-project-js-proj-8/assets/vendor-Ds_hiZzJ.css">
-  <link rel="stylesheet" crossorigin href="/goit-team-project-js-proj-8/assets/index-C3B28diW.css">
+  <link rel="stylesheet" crossorigin href="/goit-team-project-js-proj-8/assets/index-Dxyxrfc6.css">
 </head>
 <body>
 <header class="header">
@@ -124,7 +124,15 @@
                 <p class="dessert-subtitle">Спробуйте наші смачні десерти, які вас здивують!</p>
             </div>
             <div class="category-wrapper hidden">
-                <ul class="category-list">
+                <button
+                    class="category-select-trigger"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="category-list"
+                >
+                    <span class="category-select-value">Всі десерти</span>
+                </button>
+                <ul class="category-list" id="category-list">
                     <li class="category-item" data-category-id="all">
                         <button class="category-btn active">Всі десерти</button>
                     </li>
@@ -143,6 +151,7 @@
         </div>
     </div>
 </section>
+
 <section class="about section" id="section-about">
     <div class="container">
         <div class="about-content">
