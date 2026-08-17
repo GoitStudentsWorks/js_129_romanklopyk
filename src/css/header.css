@@ -250,6 +250,10 @@ body.is-scroll-locked {
 }
 
 @media screen and (min-width: 1158px) {
+    .mob-menu {
+        display: none !important;
+    }
+
     .header {
         padding-inline: 0px;
     }

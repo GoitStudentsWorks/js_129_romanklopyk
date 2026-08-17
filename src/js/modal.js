@@ -37,4 +37,11 @@
             closeMenu();
         }
     });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768) {
+            refs.menu.classList.remove('is-open');
+            refs.body.classList.remove('is-scroll-locked');
+        }
+    });
 })();
