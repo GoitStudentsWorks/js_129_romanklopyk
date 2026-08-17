@@ -1,6 +1,6 @@
 (() => {
     const refs = {
-        openMenuBtn: document.querySelector('.nav-button'),
+        openMenuBtn: document.querySelector('[data-menu-open]'),
         closeMenuBtn: document.querySelector('.mob-menu-button'),
         menu: document.querySelector('.mob-menu'),
         body: document.body,
@@ -35,6 +35,13 @@
     window.addEventListener('keydown', e => {
         if (e.key === 'Escape') {
             closeMenu();
+        }
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768) {
+            refs.menu.classList.remove('is-open');
+            refs.body.classList.remove('is-scroll-locked');
         }
     });
 })();
