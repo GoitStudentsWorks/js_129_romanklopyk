@@ -14,6 +14,10 @@
     height: 100%;
 }
 
+body.is-scroll-locked {
+    overflow: hidden;
+}
+
 .icon-logo-svg {
     width: 112px;
     height: 48px;

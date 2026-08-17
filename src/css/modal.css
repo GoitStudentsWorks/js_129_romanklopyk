@@ -34,8 +34,7 @@
 .mob-menu-top {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Розштовхує логотип ліворуч, а хрестик — праворуч */
-    width: 100%;
+    justify-content: space-between;
 }
 
 .mob-menu-button {
@@ -46,7 +45,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* position: absolute; — ВИДАНЕНО, щоб не ламати флекс-рядок */
 }
 
 .svg-icon {
